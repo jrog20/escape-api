@@ -1,4 +1,4 @@
-class API::V1::FlightsController < ApplicationController
+class Api::V1::FlightsController < ApplicationController
   def index
     @flights = Flight.all
     render json: @flights, status: 200

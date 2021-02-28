@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Flight.create([
+  {body: 'to BOS for $55'},
+  {body: 'to SFO for $155'},
+  {body: 'to SJO for $75'},
+  {body: 'to CMN for $355'},
+  {body: 'to EZE for $299'},
+  {body: 'to CDG for $99'},
+  {body: 'to MIA for $135'},
+  {body: 'to BCN for $295'},
+])
