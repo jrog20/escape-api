@@ -4,8 +4,12 @@ class Flights {
   constructor() {
     this.flights = []
     this.adapter = new FlightsAdapter()
-    // this.bindEventListeners()
+    this.initBindingsAndEventListeners()
     this.fetchAndLoadFlights()
+  }
+
+  initBindingsAndEventListeners() {
+    this.flightsContainer = document.getElementById('flights-container')
   }
 
   fetchAndLoadFlights() {
@@ -21,7 +25,7 @@ class Flights {
 
   // render data to DOM
   render() {
-    const flightsContainer = document.getElementById('flights-container');
-    flightsContainer.innerText = this.flights.body
+    // console.log(this.flights.map(flight => `<li>${flight.body}</li>`).join(" "))
+    this.flightsContainer.innerHTML = this.flights.map(flight => `<li>${flight.body}</li>`).join(" ")
   }
 }
