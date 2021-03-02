@@ -1,4 +1,4 @@
-// Communicates with the API and gives info to frontend
+// Communicates with the API and gives info to frontend (the controller)
 
 class FlightsAdapter {
   constructor() {
@@ -6,7 +6,6 @@ class FlightsAdapter {
   }
 
   getFlights() {
-    return fetch(this.baseUrl).then(res => res.json()
-    )
+    return fetch(this.baseUrl).then(res => res.json())
   }
 }
