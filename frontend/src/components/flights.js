@@ -26,6 +26,6 @@ class Flights {
   // render data to DOM
   render() {
     // console.log(this.flights.map(flight => `<li>${flight.body}</li>`).join(" "))
-    this.flightsContainer.innerHTML = this.flights.map(flight => `<li>${flight.body}</li>`).join(" ")
+    this.flightsContainer.innerHTML = this.flights.map(flight => flight.renderLi()).join(" ")
   }
 }
